@@ -6,5 +6,19 @@ body
 h1, h2, h3, h4, h5, h6
   font-family: 'Raleway', helvetica, arial, sans-serif
 
+h2
+  padding-left: $main-padding
+
 strong
   font-weight: bolder
+
+a
+  color: $primary
+  text-decoration: none
+  transition: 0.3s
+  &:hover
+    color: $primary-light
+  &:visited
+    color: $primary-dark
+  &:active
+    transform: scale(1.3)

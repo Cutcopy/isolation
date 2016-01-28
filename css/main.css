@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* 1.1 Vendors - Normalize */
+/* Vendors - Normalize */
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
@@ -409,7 +409,7 @@ th {
   padding: 0;
 }
 
-/* 1.2 Vendors - Toast Grid */
+/* Vendors - Toast Grid */
 /*-----------------------------------*  $TOAST-GRID
   An insane grid.
   You'd be mad to use it.
@@ -685,7 +685,7 @@ th {
   vertical-align: middle;
 }
 
-/* 2.1 Base Styles */
+/* Base Styles */
 \:root {
   font-size: 15px;
 }
@@ -698,12 +698,22 @@ body {
   background-color: white;
 }
 
-main {
+.row {
   margin: 10px auto;
-  max-width: 1200px;
+  max-width: 80rem;
 }
 
-/* 2.2 Typography */
+main, header, nav, footer {
+  width: 100%;
+  border-bottom: 0.5rem solid black;
+}
+
+hr {
+  border-bottom: 0.5rem solid black;
+  width: 100%;
+}
+
+/* Typography */
 body {
   color: #303030;
   font-family: 'Raleway', helvetica, arial, sans-serif;
@@ -714,11 +724,68 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', helvetica, arial, sans-serif;
 }
 
+h2 {
+  padding-left: 1rem;
+}
+
 strong {
   font-weight: bolder;
 }
 
-/* 2.3 Navigation / Navbar */
+a {
+  color: #DE2C69;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+
+a:hover {
+  color: #ec84a8;
+}
+
+a:visited {
+  color: #8e163f;
+}
+
+a:active {
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+/* Header */
+.logo {
+  fill: black;
+  width: 3em;
+  display: inline;
+}
+
+header .row {
+  padding: 1rem;
+}
+
+header h1 {
+  display: inline;
+  margin-left: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+nav ul li a {
+  font-weight: bold;
+  color: #DE2C69;
+  text-decoration: none;
+}
+
+/* Navigation / Navbar */
 header img {
   width: 100%;
 }
@@ -757,9 +824,9 @@ header img {
 }
 
 .main-nav li a:hover {
-  background: #0B4492;
-  color: #428ECB;
-  border: 1px solid #0B4492;
+  background: #8e163f;
+  color: #ec84a8;
+  border: 1px solid #8e163f;
 }
 
 .main-nav li a i {
@@ -770,14 +837,102 @@ header img {
 .main-nav li h1 {
   height: 7.2rem;
   width: 7.2rem;
-  background: #0B4492;
+  background: #8e163f;
   box-shadow: 0 0 3px #303030;
   font-size: 1rem;
   margin: 0 auto;
 }
 
-/* 2.4 Footer */
-/* 2.5 Utilities */
+/* About Section */
+.about {
+  padding: 1rem;
+  border-bottom: 0.5rem solid black;
+}
+
+.headshot {
+  border-radius: 50%;
+  border: 0.3rem solid white;
+  box-shadow: 0 0 0 0.3rem black;
+  width: 100%;
+  max-width: 15rem;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+
+.headshot:hover {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.contact-info strong {
+  letter-spacing: 0.7px;
+  margin-top: 1em;
+}
+
+.contact-info span {
+  font-size: x-large;
+  position: relative;
+  top: 0.2rem;
+  padding: 1rem;
+}
+
+.socials {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.socials li {
+  display: inline-block;
+  margin-right: 0.7rem;
+  background: #DE2C69;
+  border-radius: 50%;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
+}
+
+.socials li a {
+  color: white;
+  line-height: 30px;
+}
+
+.socials li:hover {
+  background: #ec84a8;
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.socials li:active {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.contact-form input, .contact-form textarea {
+  border-radius: 5px;
+  padding: 1rem;
+  margin-right: 1rem/2;
+  font-size: 1rem/2;
+  color: #303030;
+  border: 2px solid #DE2C69;
+  height: 1.5rem;
+}
+
+/* Work Section */
+.work .wrapper {
+  background: grey;
+}
+
+.one {
+  padding: 1rem;
+}
+
+/* Footer */
+/* Utilities */
 /* Responsive Embed */
 .embed-container {
   position: relative;
