@@ -1,0 +1,24 @@
+{
+  "name": "isolation",
+  "authors": [
+    "Bryce Stradling <bryce@getvyral.com>"
+  ],
+  "description": "web designer theme",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "themeing",
+    "personal",
+    "website"
+  ],
+  "license": "MIT",
+  "homepage": "brycestradling.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
