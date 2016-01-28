@@ -12,7 +12,7 @@ body
     section.about
       .row
         .col.col--4-of-12
-          img.headshot(src="http://fillmurray.com/200/200", alt="My beautiful face")
+          img.headshot(src="/img/b_photos.jpg", alt="My beautiful face")
         .col.col--8-of-12
           p.contact-info
             p
@@ -50,35 +50,56 @@ body
                   textarea(name="message" placeholder="Message")
                 .col.col-2-of-12  
                   input(type="submit")
-    section.work
+    section.design
       .row
         .col.col-12-of-12
           h2 Design
-      mixin work
-        hr
-        .wrapper
-          .row
-            .one.col.col-12-of-12
-              .col.col-3-of-12
-                img(src="http://placehold.it/200x400", alt="")
-              .col.col-3-of-12
-                img(src="http://placehold.it/200x400", alt="")
-              .col.col-3-of-12
-                img(src="http://placehold.it/200x400", alt="")
-              .col.col-3-of-12
-                img(src="http://placehold.it/200x400", alt="")
-      +work
+      hr
+      .wrapper
+        .row
+          .gallery
+            #Andrews.carousel.slide(data-ride="carousel")
+              ol.carousel-indicators
+                li(data-target="Andrews", data-slide-to="0" class="active")
+                li(data-target="Andrews", data-slide-to="1")
+                li(data-target="Andrews", data-slide-to="2")
+              .carousel-inner(role="listbox")
+                - var andrew1 = "http://fillmurray.com/800/450";
+                .item.active(data-toggle="modal" data-target="#myModal")
+                  img(src="#{andrew1}", alt="")
+                  .carousel-caption
+                    p One
+                .item(data-toggle="modal" data-target="#myModal")
+                  img(src="http://nicenicejpg.com/800/450", alt="")
+                  .carousel-caption
+                    p Two
+                .item(data-toggle="modal" data-target="#myModal")
+                  img(src="http://placehold.it/800x450", alt="")
+                  .carousel-caption
+                    p Three
+              a(class="left carousel-control" href="#Andrews" role="button" data-slide="prev") Prev             
+              a(class="right carousel-control" href="#Andrews" role="button" data-slide="next") Next
+              script $('.carousel').carousel()
+              
+              .modal.fade#myModal(tabindex="1" role="dialog" aria-labelledby="myModalLabel")
+                .modal-dialog(role="document")
+                  .modal-content
+                    .modal-header
+                      button.close(type="button" data-dismiss="modal" aria-label="close") 
+                        span(aria-hidden="true") &times;
+                    .modal-body
+                      img(src="#{andrew1}", alt="") 
+                 
+           
+    section.photography
       .row
         .col.col-12-of-12
-          h3 Case Study: Andrews Realty Group
-      +work
+          h2 Photography
+      hr
+    section.illustration
       .row
         .col.col-12-of-12
-          h3 Case Study: Career Academy of Real Estate
-      +work
-      .row
-        .col.col-12-of-12
-          h3 Case Study: Rhonda Sher - LinkedIn Consultant
-      +work                
-                  
+          h2 Illustration
+      hr
+                            
   include ./includes/footer.jade    
