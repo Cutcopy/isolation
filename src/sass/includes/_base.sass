@@ -5,7 +5,11 @@
   box-sizing: border-box
 
 body
-  background-color: white;
+  background-color: white
+  color: $black
+  font-family: 'Raleway', helvetica, arial, sans-serif
+  font-weight: 300
+  letter-spacing: 0.5px
 
 .row
   margin: 10px auto
@@ -18,3 +22,43 @@ main, header, nav, footer
 hr
   @include bottom-border
   width: 100%
+
+input[type="submit"], .button, button
+  background: $primary
+  color: white
+  border: none
+  border-radius: $main-border-radius
+  transition: $timing
+  padding: 5px
+  &:hover
+    background: $primary-light
+    color: white
+    cursor: pointer
+    transform: scale(1.2)
+  &:active
+    background: $primary-dark
+  &:focus
+    outline: none
+    background: $primary-dark
+
+// Typography
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Raleway', helvetica, arial, sans-serif
+
+h2
+  padding-left: $main-padding
+
+strong
+  font-weight: 700
+
+a
+  color: $primary
+  text-decoration: none
+  transition: $timing
+  &:hover
+    color: $primary-light
+  &:visited
+    color: $primary-dark
+  &:active
+    transform: scale(1.3)

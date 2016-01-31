@@ -12,7 +12,8 @@ body
     section.about
       .row
         .col.col--4-of-12
-          img.headshot(src="/img/b_photos.jpg", alt="My beautiful face")
+          a(href="#")
+            img.headshot(src="/img/b_photos.jpg", alt="My beautiful face")
         .col.col--8-of-12
           p.contact-info
             p
@@ -41,6 +42,9 @@ body
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam voluptates dolores dicta, officia expedita consequuntur tempora fugiat iusto molestiae accusantium, magni possimus neque soluta quibusdam cupiditate amet, culpa ea. Perspiciatis!
           
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam voluptates dolores dicta, officia expedita consequuntur tempora fugiat iusto molestiae accusantium, magni possimus neque soluta quibusdam cupiditate amet, culpa ea. Perspiciatis!
+          
+          p
+            a.button(href="https://google.com") Download My Resume
           //
             .row
               form(action="#" method="post" class="contact-form")
@@ -99,7 +103,8 @@ body
           h2 Photography
       hr
       .wrapper
-        .gallery#instafeed(style="height: 300px;")
+        .gallery
+          #instafeed
           
           //iframe(src="http://widget.websta.me/in/brycestradling/?r=1&w=10&h=1&b=0&bg=8A8A8A&p=0" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:1000px; height: 100px")
     section.illustration

@@ -1568,12 +1568,12 @@ if (typeof jQuery === 'undefined') {
 }).call(this);
 
 var feed = new Instafeed({
-        target: 'instafeed',
         get: 'user',
-        userId: 'brycestradling',
+        userId: '198028457',
         sortBy: 'most-recent',
-        resolution: 'standard_resolution',
-        error: 'wtf',
-        clientId: '2aebe0efb579478cb87d17150358ce8f'
+        limit: 22,
+        //template: '<a href="{{link}}"><div>{{likes}}</div><img src="{{image}}" /></a>',
+        resolution: 'low_resolution',
+        clientId: 'b13d92eda3a244e69daa44304a832de4'
     });
     feed.run();
