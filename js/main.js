@@ -1572,7 +1572,8 @@ var feed = new Instafeed({
         userId: '198028457',
         sortBy: 'most-recent',
         limit: 22,
-        //template: '<a href="{{link}}"><div>{{likes}}</div><img src="{{image}}" /></a>',
+        //template: '<div class="item"><div class="insta-photo" style="background-image:url({{image}})"></div><div class="carousel-caption"><p>{{caption}}</p></div></div>',
+        template: '<div class="item"><img class="insta-photo" src="{{image}}"></div>',
         resolution: 'low_resolution',
         clientId: 'b13d92eda3a244e69daa44304a832de4'
     });

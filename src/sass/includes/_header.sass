@@ -1,7 +1,20 @@
 .logo
-  fill: black
-  width: 3em
+  fill: white
+  width: 3.5em
   display: inline
+  animation: logo 3s ease-out forwards
+
+@keyframes logo
+  0%
+    stroke: $primary
+    stroke-width: 15px
+  100%
+    fill: black
+
+a > .title
+  color: black
+  &:visited
+    color: black
 
 header
   .row
@@ -10,6 +23,7 @@ header
     display: inline
     margin-left: 1rem
 nav
+  display: inline-block
   ul
     list-style: none
     display: inline-block
@@ -20,3 +34,8 @@ nav
         font-weight: bold
         color: $primary
         text-decoration: none
+
+@media (max-width: 610px)
+  nav ul
+    margin-bottom:  0
+    padding-left: 0
