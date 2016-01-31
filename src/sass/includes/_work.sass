@@ -14,15 +14,18 @@
   align-content: stretch
   box-shadow: inset 0 0 5px black
 
+.carousel
+  width: 100%
+
 .carousel-control
-  color: white
+  color: $primary
   font-size: 3rem
   display: flex
   align-items: center
   align-content: center
   justify-content: center
   &:hover
-    color: $primary
+    color: white
   &:active
     color: $primary-light
 
@@ -30,6 +33,25 @@
   background-image: linear-gradient(to right, transparentize($primary, 0.4), rgba(0,0,0,0))
 .carousel-control.right:hover
   background-image: linear-gradient(to left, transparentize($primary, 0.4), rgba(0,0,0,0))
+
+.item
+  cursor: pointer
+
+.carousel-caption
+  font-weight: bold
+  p
+    background: $primary
+    border-radius: $main-border-radius
+    max-width: 200px
+    box-shadow: 0 0 3px black
+    margin: 10px auto
+    padding: 5px
+
+.carousel-indicators li
+  border-color: $primary
+
+.carousel-indicators .active
+  background: $primary
 
 .modal-body
   img

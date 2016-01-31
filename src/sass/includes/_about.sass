@@ -6,6 +6,7 @@
   border-radius: 50%
   border: 0.3rem solid white
   box-shadow: 0 0 0 0.3rem black
+  margin-bottom: 1rem
   width: 100%
   max-width: 15rem
   transition: $timing
@@ -13,6 +14,10 @@
   &:hover
     transform: scale(0.8)
     filter: hue-rotate(90deg)
+
+@media (min-width: 1000px)
+  .headshot
+    margin: 36px auto
 
 .contact-info
   strong
