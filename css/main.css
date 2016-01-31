@@ -1750,7 +1750,8 @@ header img {
 }
 
 .gallery {
-  height: 300px;
+  height: auto;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1795,6 +1796,16 @@ header img {
 
 .carousel-control:active {
   color: #ec84a8;
+}
+
+.carousel-control.left:hover {
+  background-image: -webkit-linear-gradient(left, rgba(222, 44, 105, 0.6), transparent);
+  background-image: linear-gradient(to right, rgba(222, 44, 105, 0.6), transparent);
+}
+
+.carousel-control.right:hover {
+  background-image: -webkit-linear-gradient(right, rgba(222, 44, 105, 0.6), transparent);
+  background-image: linear-gradient(to left, rgba(222, 44, 105, 0.6), transparent);
 }
 
 .modal-body img {

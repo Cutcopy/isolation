@@ -6,7 +6,8 @@
         box-shadow: 0 0 5px black
 
 .gallery
-  height: 300px
+  height: auto
+  overflow: hidden
   display: flex
   justify-content: center
   align-items: stretch
@@ -24,6 +25,11 @@
     color: $primary
   &:active
     color: $primary-light
+
+.carousel-control.left:hover
+  background-image: linear-gradient(to right, transparentize($primary, 0.4), rgba(0,0,0,0))
+.carousel-control.right:hover
+  background-image: linear-gradient(to left, transparentize($primary, 0.4), rgba(0,0,0,0))
 
 .modal-body
   img
