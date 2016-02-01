@@ -1493,6 +1493,10 @@ input[type="submit"]:focus, .button:focus, button:focus {
   background: #8e163f;
 }
 
+input[type="submit"]:visited, .button:visited, button:visited {
+  color: white;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', helvetica, arial, sans-serif;
 }
@@ -1829,6 +1833,16 @@ header img {
   cursor: pointer;
 }
 
+.item img {
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+
+.item img:hover {
+  -webkit-filter: hue-rotate(90deg);
+          filter: hue-rotate(90deg);
+}
+
 .carousel-caption {
   font-weight: bold;
 }
@@ -1866,7 +1880,88 @@ header img {
   }
 }
 
+#instafeed {
+  padding: 0.33333rem;
+  position: relative;
+  width: 100%;
+}
+
+#instafeed .instaphoto {
+  display: block;
+  float: left;
+  position: relative;
+  margin: 0 auto;
+  padding: 5px;
+  width: 20%;
+  -webkit-flex-shrink: 200px;
+      -ms-flex-negative: 200px;
+          flex-shrink: 200px;
+  height: auto;
+}
+
+#instafeed img {
+  display: inline-block;
+  width: 100%;
+  padding: 0.33333rem;
+  box-shadow: 0 0 3px black;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+
+#instafeed img:hover {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-filter: hue-rotate(90deg);
+          filter: hue-rotate(90deg);
+}
+
 /* Footer */
+footer {
+  min-height: 200px;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.top {
+  padding-left: 1rem;
+  display: inline-block;
+  -webkit-animation: bob 3s infinite;
+          animation: bob 3s infinite;
+}
+
+@-webkit-keyframes bob {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bob {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 /* Utilities */
 /* Responsive Embed */
 .embed-container {

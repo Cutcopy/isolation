@@ -36,6 +36,10 @@
 
 .item
   cursor: pointer
+  img
+    transition: $timing
+    &:hover
+      filter: hue-rotate(90deg)
 
 .carousel-caption
   font-weight: bold
@@ -43,7 +47,7 @@
     background: $primary
     border-radius: $main-border-radius
     max-width: 200px
-    box-shadow: 0 0 3px black
+    box-shadow: $main-box-shadow
     margin: 10px auto
     padding: 5px
 
@@ -66,12 +70,25 @@
     font-size: 1rem
 
 //Photography
-// #instafeed
-//   height: 300px
-//
-// #instafeed > .item
-//   display: inline
-//
-// #instafeed > .item > img
-//   display: inline
-//   float: left
+#instafeed
+  padding: $main-padding/3
+  position: relative
+  width: 100%
+  .instaphoto
+    display: block
+    float: left
+    position: relative
+    margin: 0 auto
+    padding: 5px
+    width: 20%
+    flex-shrink: 200px
+    height: auto
+  img
+    display: inline-block
+    width: 100%
+    padding: $main-padding/3
+    box-shadow: $main-box-shadow
+    transition: $timing
+    &:hover
+      transform: scale(0.8)
+      filter: hue-rotate(90deg)

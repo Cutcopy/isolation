@@ -1571,9 +1571,10 @@ var feed = new Instafeed({
         get: 'user',
         userId: '198028457',
         sortBy: 'most-recent',
-        limit: 22,
-        //template: '<div class="item"><div class="insta-photo" style="background-image:url({{image}})"></div><div class="carousel-caption"><p>{{caption}}</p></div></div>',
-        template: '<div class="item"><img class="insta-photo" src="{{image}}"></div>',
+        limit: '10',
+        // w/caption template: '<div class="item"><div class="insta-photo" style="background-image:url({{image}})"></div><div class="carousel-caption"><p>{{caption}}</p></div></div>',
+        // normal slider template: '<div class="item"><img class="insta-photo" src="{{image}}"></div>',
+        template: '<div class="instaphoto"><a href="{{link}}"><img src="{{image}}"></a></div>',
         resolution: 'low_resolution',
         clientId: 'b13d92eda3a244e69daa44304a832de4'
     });
