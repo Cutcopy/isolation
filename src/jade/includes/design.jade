@@ -16,16 +16,19 @@ section.design
           li(data-target="design", data-slide-to="1")
           li(data-target="design", data-slide-to="2")
         .carousel-inner(role="listbox")
-          .item.active(data-toggle="modal" data-target="#myModal")
-            img(src="/img/CARE_b_thumb.png", alt="")
+          .item.active
+            a(href="/care.html")
+              img(src="/img/CARE_b_thumb.png", alt="")
             .carousel-caption
               p Career Academy of Real Estate 
-          .item(data-toggle="modal" data-target="#myModal")
-            img(src="img/Andrews_b_thumb.png", alt="")
+          .item
+            a(href="/andrews.html")  
+              img(src="img/Andrews_b_thumb.png", alt="")
             .carousel-caption
               p Andrews Realty Group
-          .item(data-toggle="modal" data-target="#myModal")
-            img(src="/img/vyral_b_thumb.png", alt="")
+          .item
+            a(href="/vyral.html")
+              img(src="/img/vyral_b_thumb.png", alt="")
             .carousel-caption
               p Vyral Marketing
         a(class="left carousel-control" href="#design" role="button" data-slide="prev") 
@@ -35,11 +38,4 @@ section.design
           i.fa.fa-arrow-right
           span.sr-only Next
         
-        .modal.fade#myModal(tabindex="1" role="dialog" aria-labelledby="myModalLabel")
-          .modal-dialog(role="document")
-            .modal-content
-              .modal-header
-                button.close(type="button" data-dismiss="modal" aria-label="close") 
-                  span(aria-hidden="true") &times;
-              .modal-body
-                img(src="#{andrew1}", alt="")
+        

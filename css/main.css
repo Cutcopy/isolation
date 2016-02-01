@@ -1532,8 +1532,9 @@ a:active {
 
 /* Header */
 .logo {
-  fill: white;
+  fill: black;
   width: 3.5em;
+  height: 50px;
   display: inline;
   position: relative;
   -webkit-animation: logo 3s ease-in forwards;
@@ -1542,6 +1543,7 @@ a:active {
 
 @-webkit-keyframes logo {
   0% {
+    fill: white;
     stroke: #DE2C69;
     stroke-width: 10px;
     bottom: 2rem;
@@ -1554,6 +1556,7 @@ a:active {
 
 @keyframes logo {
   0% {
+    fill: white;
     stroke: #DE2C69;
     stroke-width: 10px;
     bottom: 2rem;
@@ -1604,6 +1607,40 @@ nav ul li a {
 @media (max-width: 610px) {
   nav ul {
     margin-bottom: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  header h1 {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto;
+  }
+  nav {
+    display: block;
+    text-align: center;
+  }
+  nav ul {
+    display: block;
+    width: 100%;
+  }
+  .headshot {
+    display: block;
+    margin: 15px auto;
+  }
+  .about {
+    text-align: center;
+  }
+  .about .bio {
+    text-align: left;
+  }
+  header, .about .col {
     padding-left: 0;
   }
 }
@@ -1864,8 +1901,13 @@ header img {
   background: #DE2C69;
 }
 
+.modial-dialog {
+  width: 80%;
+}
+
 .modal-body img {
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1000px) {
@@ -1916,6 +1958,31 @@ header img {
           filter: hue-rotate(90deg);
 }
 
+.webflow h2 {
+  padding-left: 0;
+}
+
+.webflow img {
+  width: 100%;
+  box-shadow: 0 0 3px black;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+
+.webflow img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.modal-body img:hover {
+  cursor: default;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
 /* Footer */
 footer {
   min-height: 200px;
@@ -1930,6 +1997,10 @@ footer {
   display: inline-block;
   -webkit-animation: bob 3s infinite;
           animation: bob 3s infinite;
+}
+
+.top a:visited {
+  color: #DE2C69;
 }
 
 @-webkit-keyframes bob {

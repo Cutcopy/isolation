@@ -57,9 +57,14 @@
 .carousel-indicators .active
   background: $primary
 
+.modial-dialog
+  width: 80%
+
 .modal-body
   img
     width: 100%
+    margin-bottom: 1rem
+
 
 @media (min-width: 1000px)
   .carousel-control
@@ -92,3 +97,18 @@
     &:hover
       transform: scale(0.8)
       filter: hue-rotate(90deg)
+
+.webflow
+  h2
+    padding-left: 0
+  img
+    width: 100%
+    box-shadow: $main-box-shadow
+    transition: $timing
+    &:hover
+      cursor: pointer
+      transform: scale(0.8)
+
+.modal-body img:hover
+    cursor: default
+    transform: scale(1)

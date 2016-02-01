@@ -1,12 +1,14 @@
 .logo
-  fill: white
+  fill: black
   width: 3.5em
+  height: 50px
   display: inline
   position: relative
   animation: logo 3s ease-in forwards
 
 @keyframes logo
   0%
+    fill: white
     stroke: $primary
     stroke-width: 10px
     bottom: 2rem
@@ -25,6 +27,7 @@ header
   h1
     display: inline
     margin-left: 1rem
+
 nav
   display: inline-block
   ul
@@ -38,7 +41,33 @@ nav
         color: $primary
         text-decoration: none
 
+
 @media (max-width: 610px)
   nav ul
     margin-bottom:  0
+    padding-left: 0
+
+@media (max-width: 400px)
+  header h1
+    display: block
+    margin-left: 0
+    margin-bottom: 0
+    text-align: center
+  .logo
+    display: block
+    margin: 0 auto
+  nav
+    display: block
+    text-align: center
+    ul
+      display: block
+      width: 100%
+  .headshot
+    display: block
+    margin: 15px auto
+  .about
+    text-align: center
+    .bio
+      text-align: left
+  header, .about .col
     padding-left: 0
