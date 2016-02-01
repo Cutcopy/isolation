@@ -2033,6 +2033,12 @@ footer {
   }
 }
 
+@media (max-width: 400px) {
+  footer .contact-info strong {
+    display: block;
+  }
+}
+
 /* Utilities */
 /* Responsive Embed */
 .embed-container {
